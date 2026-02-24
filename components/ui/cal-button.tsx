@@ -23,8 +23,8 @@ export function CalButton({ calLink, className, children }: CalButtonProps) {
       cal("ui", {
         theme: "light",
         cssVarsPerTheme: {
-          light: { "cal-brand": "#006341" },
-          dark: { "cal-brand": "#006341" },
+          light: { "cal-brand": "#003631" },
+          dark: { "cal-brand": "#003631" },
         },
       });
     })();

@@ -25,6 +25,8 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
+  --color-butter: var(--butter);
+  --color-butter-foreground: var(--butter-foreground);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -45,61 +47,65 @@
 }
 
 :root {
-  /* Green Forest & Ivory Theme */
-  --radius: 0.5rem;
+  /* Dark Green & Butter Yellow — Premium Car Wash */
+  --radius: 0.375rem;
 
-  /* Background: Ivory */
-  --background: oklch(0.998 0.015 102);
+  /* Background: Warm off-white (#F8F5EE) */
+  --background: oklch(0.97 0.012 90);
   /* Foreground: Near-black */
-  --foreground: oklch(0.1 0 0);
+  --foreground: oklch(0.10 0.005 250);
 
-  /* Card: White */
+  /* Card: Pure white for subtle lift above background */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.1 0 0);
+  --card-foreground: oklch(0.10 0.005 250);
 
   /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.1 0 0);
+  --popover-foreground: oklch(0.10 0.005 250);
 
-  /* Primary: Forest Green */
-  --primary: oklch(0.42 0.13 160);
-  /* primary-foreground: White */
-  --primary-foreground: oklch(1 0 0);
+  /* Primary: Deep Forest Green (#003631) */
+  --primary: oklch(0.21 0.06 175);
+  /* primary-foreground: Off-white for legibility on dark green */
+  --primary-foreground: oklch(0.97 0.012 90);
 
-  /* Secondary: Light gray */
-  --secondary: oklch(0.96 0.005 90);
-  --secondary-foreground: oklch(0.1 0 0);
+  /* Secondary: Very light gray (#F2F2F0) */
+  --secondary: oklch(0.95 0.003 90);
+  --secondary-foreground: oklch(0.10 0.005 250);
 
   /* Muted */
-  --muted: oklch(0.96 0.005 90);
-  --muted-foreground: oklch(0.60 0 0);
+  --muted: oklch(0.95 0.003 90);
+  --muted-foreground: oklch(0.55 0.005 250);
 
-  /* Accent */
-  --accent: oklch(0.96 0.005 90);
-  --accent-foreground: oklch(0.1 0 0);
+  /* Accent: Butter Yellow (#FFEDA8) — for CTAs and highlights */
+  --accent: oklch(0.945 0.10 99);
+  --accent-foreground: oklch(0.21 0.06 175);
+
+  /* Butter Yellow — standalone utility token */
+  --butter: oklch(0.945 0.10 99);
+  --butter-foreground: oklch(0.21 0.06 175);
 
   /* Destructive: Red */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
 
-  /* Border */
-  --border: oklch(0.918 0.008 90);
+  /* Border: slightly warmer/darker than background */
+  --border: oklch(0.90 0.008 90);
 
   /* Input */
-  --input: oklch(0.918 0.008 90);
+  --input: oklch(0.90 0.008 90);
 
-  /* Ring: Forest Green */
-  --ring: oklch(0.42 0.13 160);
+  /* Ring: Deep Forest Green */
+  --ring: oklch(0.21 0.06 175);
 
   /* Sidebar */
-  --sidebar: oklch(0.998 0.015 102);
-  --sidebar-foreground: oklch(0.1 0 0);
-  --sidebar-primary: oklch(0.42 0.13 160);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.96 0.005 90);
-  --sidebar-accent-foreground: oklch(0.1 0 0);
-  --sidebar-border: oklch(0.918 0.008 90);
-  --sidebar-ring: oklch(0.42 0.13 160);
+  --sidebar: oklch(0.97 0.012 90);
+  --sidebar-foreground: oklch(0.10 0.005 250);
+  --sidebar-primary: oklch(0.21 0.06 175);
+  --sidebar-primary-foreground: oklch(0.97 0.012 90);
+  --sidebar-accent: oklch(0.95 0.003 90);
+  --sidebar-accent-foreground: oklch(0.10 0.005 250);
+  --sidebar-border: oklch(0.90 0.008 90);
+  --sidebar-ring: oklch(0.21 0.06 175);
 }
 
 @layer base {

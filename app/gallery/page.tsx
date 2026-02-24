@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { Suspense } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
@@ -40,7 +40,9 @@ export default function GalleryPage() {
 
             {/* Gallery Grid */}
             <section className="pb-20 px-4 container mx-auto">
-                <GalleryGrid images={galleryImages} />
+                <Suspense fallback={<div className="text-center py-20 text-muted-foreground">Chargement…</div>}>
+                    <GalleryGrid images={galleryImages} />
+                </Suspense>
             </section>
 
             <Footer />
