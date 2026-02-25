@@ -1,5 +1,4 @@
 import { Star } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { AnimateInView } from "@/components/ui/animate-in-view";
 
 export function Testimonials() {
@@ -25,36 +24,33 @@ export function Testimonials() {
     ];
 
     return (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-[#002e29]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-foreground">
-                        Ce qu&apos;ils disent de <span className="text-primary">nous</span>
+                    <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+                        <span className="text-[#FFEDA8]/60">Ce qu&apos;ils disent de </span>
+                        <span className="text-[#FFEDA8]">nous</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    <p className="text-[#FFEDA8]/50 text-lg max-w-2xl mx-auto">
                         La satisfaction de nos clients est notre meilleure publicité
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {testimonials.map((testimonial, index) => (
                         <AnimateInView key={index} delay={index * 200}>
-                            <Card className="bg-card border border-border h-full">
-                                <CardHeader>
-                                    <div className="flex gap-1 mb-4">
-                                        {[...Array(testimonial.rating)].map((_, i) => (
-                                            <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                                        ))}
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-foreground/80 italic mb-6">&quot;{testimonial.content}&quot;</p>
-                                    <div>
-                                        <p className="font-bold text-foreground">{testimonial.name}</p>
-                                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <div className="bg-[#003631] border border-[#FFEDA8]/10 p-8 h-full flex flex-col">
+                                <div className="flex gap-1 mb-5">
+                                    {[...Array(testimonial.rating)].map((_, i) => (
+                                        <Star key={i} className="h-4 w-4 fill-[#FFEDA8] text-[#FFEDA8]" />
+                                    ))}
+                                </div>
+                                <p className="text-[#FFEDA8]/65 italic mb-6 leading-relaxed flex-grow">&quot;{testimonial.content}&quot;</p>
+                                <div className="border-t border-[#FFEDA8]/10 pt-5">
+                                    <p className="font-bold text-[#FFEDA8] text-sm">{testimonial.name}</p>
+                                    <p className="text-xs text-[#FFEDA8]/40 mt-0.5">{testimonial.role}</p>
+                                </div>
+                            </div>
                         </AnimateInView>
                     ))}
                 </div>

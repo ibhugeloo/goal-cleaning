@@ -27,13 +27,14 @@ export function FAQ() {
     ];
 
     return (
-        <section id="faq" className="py-16 md:py-24">
+        <section id="faq" className="py-16 md:py-24 bg-[#003631]">
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="text-center mb-16">
-                    <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-foreground">
-                        Questions <span className="text-primary">Fréquentes</span>
+                    <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+                        <span className="text-[#FFEDA8]/60">Questions </span>
+                        <span className="text-[#FFEDA8]">Fréquentes</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg">
+                    <p className="text-[#FFEDA8]/50 text-lg">
                         Tout ce que vous devez savoir sur nos services.
                     </p>
                 </div>
@@ -41,11 +42,11 @@ export function FAQ() {
                 <Accordion type="single" collapsible className="w-full">
                     {faqs.map((faq, index) => (
                         <AnimateInView key={index} delay={index * 100}>
-                            <AccordionItem value={`item-${index}`} className="border-border">
-                                <AccordionTrigger className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                            <AccordionItem value={`item-${index}`} className="border-[#FFEDA8]/15">
+                                <AccordionTrigger className="text-base font-medium text-[#FFEDA8]/80 hover:text-[#FFEDA8] transition-colors [&>svg]:text-[#FFEDA8]/50">
                                     {faq.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-muted-foreground">
+                                <AccordionContent className="text-[#FFEDA8]/55 leading-relaxed">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>

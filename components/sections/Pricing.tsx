@@ -1,6 +1,4 @@
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AnimateInView } from "@/components/ui/animate-in-view";
 import { CalButton, CAL_COMPLET, CAL_INTERIEUR, CAL_EXTERIEUR } from "@/components/ui/cal-button";
 
@@ -49,64 +47,71 @@ export function Pricing() {
     ];
 
     return (
-        <section id="services" className="py-16 md:py-24">
+        <section id="services" className="py-16 md:py-24 bg-[#003631]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-foreground">
-                        Nos <span className="text-primary">Offres</span>
+                    <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+                        <span className="text-[#FFEDA8]/60">Nos </span>
+                        <span className="text-[#FFEDA8]">Offres</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    <p className="text-[#FFEDA8]/50 text-lg max-w-2xl mx-auto">
                         Des formules adaptées à vos besoins et à votre budget
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-center">
                     {plans.map((plan, index) => (
                         <AnimateInView key={index} delay={index * 200} className="flex">
-                            <Card
-                                className={`relative flex flex-col w-full ${plan.popular
-                                    ? 'bg-primary border-primary scale-105 z-10 shadow-lg'
-                                    : 'bg-card border-border'
-                                    }`}
-                            >
-                                {plan.popular && (
-                                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-primary px-4 py-1 rounded-full text-sm font-bold">
+                            {plan.popular ? (
+                                /* ── Popular card: inverted (butter yellow bg) ── */
+                                <div className="relative flex flex-col w-full bg-[#FFEDA8] p-8 scale-105 z-10 shadow-2xl shadow-black/30">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#003631] text-[#FFEDA8] px-4 py-1 text-[0.65rem] font-bold tracking-[0.2em] uppercase">
                                         Recommandé
                                     </div>
-                                )}
-                                <CardHeader className="text-center">
-                                    <CardTitle className={`text-2xl font-bold ${plan.popular ? 'text-white' : 'text-foreground'}`}>
-                                        {plan.name}
-                                    </CardTitle>
-                                    <div className={`text-3xl font-bold mt-2 ${plan.popular ? 'text-white' : 'text-primary'}`}>
-                                        {plan.price}
+                                    <div className="text-center mb-6">
+                                        <h3 className="text-2xl font-bold text-[#003631] font-display">{plan.name}</h3>
+                                        <div className="text-3xl font-extrabold text-[#003631] mt-2 font-display">{plan.price}</div>
+                                        <p className="text-[#003631]/60 mt-1 text-sm">{plan.description}</p>
                                     </div>
-                                    <CardDescription className={`mt-2 ${plan.popular ? 'text-white/80' : 'text-muted-foreground'}`}>
-                                        {plan.description}
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-3 flex-grow mb-8">
                                         {plan.features.map((feature, i) => (
-                                            <li key={i} className={`flex items-center ${plan.popular ? 'text-white/90' : 'text-foreground/80'}`}>
-                                                <Check className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-white' : 'text-primary'}`} />
-                                                <span>{feature}</span>
+                                            <li key={i} className="flex items-center text-[#003631]/80">
+                                                <Check className="h-4 w-4 mr-2.5 flex-shrink-0 text-[#003631]" />
+                                                <span className="text-sm">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
-                                </CardContent>
-                                <CardFooter>
-                                    {plan.popular ? (
-                                        <CalButton calLink={plan.calLink} className="w-full bg-white text-primary hover:bg-gray-100">
-                                            Choisir cette formule
-                                        </CalButton>
-                                    ) : (
-                                        <CalButton calLink={plan.calLink} className="w-full bg-primary text-white hover:bg-[#004D30]">
-                                            Choisir cette formule
-                                        </CalButton>
-                                    )}
-                                </CardFooter>
-                            </Card>
+                                    <CalButton
+                                        calLink={plan.calLink}
+                                        className="w-full h-12 bg-[#003631] text-[#FFEDA8] hover:bg-[#002e29] font-bold text-sm tracking-[0.1em] uppercase rounded-none transition-colors duration-150"
+                                    >
+                                        Choisir cette formule
+                                    </CalButton>
+                                </div>
+                            ) : (
+                                /* ── Standard card ── */
+                                <div className="flex flex-col w-full bg-[#002e29] border border-[#FFEDA8]/12 hover:border-[#FFEDA8]/25 transition-colors duration-300 p-8">
+                                    <div className="text-center mb-6">
+                                        <h3 className="text-2xl font-bold text-[#FFEDA8] font-display">{plan.name}</h3>
+                                        <div className="text-3xl font-extrabold text-[#FFEDA8] mt-2 font-display">{plan.price}</div>
+                                        <p className="text-[#FFEDA8]/45 mt-1 text-sm">{plan.description}</p>
+                                    </div>
+                                    <ul className="space-y-3 flex-grow mb-8">
+                                        {plan.features.map((feature, i) => (
+                                            <li key={i} className="flex items-center text-[#FFEDA8]/65">
+                                                <Check className="h-4 w-4 mr-2.5 flex-shrink-0 text-[#FFEDA8]" />
+                                                <span className="text-sm">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <CalButton
+                                        calLink={plan.calLink}
+                                        className="w-full h-12 bg-[#FFEDA8] text-[#003631] hover:bg-[#fff5c2] font-bold text-sm tracking-[0.1em] uppercase rounded-none transition-colors duration-150"
+                                    >
+                                        Choisir cette formule
+                                    </CalButton>
+                                </div>
+                            )}
                         </AnimateInView>
                     ))}
                 </div>

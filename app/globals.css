@@ -50,33 +50,32 @@
   /* Dark Green & Butter Yellow — Premium Car Wash */
   --radius: 0.375rem;
 
-  /* Background: Warm off-white (#F8F5EE) */
-  --background: oklch(0.97 0.012 90);
-  /* Foreground: Near-black */
-  --foreground: oklch(0.10 0.005 250);
+  /* Background: Deep Forest Green (#003631) */
+  --background: oklch(0.21 0.06 175);
+  /* Foreground: Butter Yellow (#FFEDA8) */
+  --foreground: oklch(0.945 0.10 99);
 
-  /* Card: Pure white for subtle lift above background */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.10 0.005 250);
+  /* Card: Slightly darker green for depth */
+  --card: oklch(0.175 0.05 175);
+  --card-foreground: oklch(0.945 0.10 99);
 
   /* Popover */
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.10 0.005 250);
+  --popover: oklch(0.175 0.05 175);
+  --popover-foreground: oklch(0.945 0.10 99);
 
-  /* Primary: Deep Forest Green (#003631) */
-  --primary: oklch(0.21 0.06 175);
-  /* primary-foreground: Off-white for legibility on dark green */
-  --primary-foreground: oklch(0.97 0.012 90);
+  /* Primary: Butter Yellow — CTA / accent color */
+  --primary: oklch(0.945 0.10 99);
+  --primary-foreground: oklch(0.21 0.06 175);
 
-  /* Secondary: Very light gray (#F2F2F0) */
-  --secondary: oklch(0.95 0.003 90);
-  --secondary-foreground: oklch(0.10 0.005 250);
+  /* Secondary: Darker green surface */
+  --secondary: oklch(0.175 0.05 175);
+  --secondary-foreground: oklch(0.945 0.10 99);
 
   /* Muted */
-  --muted: oklch(0.95 0.003 90);
-  --muted-foreground: oklch(0.55 0.005 250);
+  --muted: oklch(0.175 0.05 175);
+  --muted-foreground: oklch(0.73 0.07 99);
 
-  /* Accent: Butter Yellow (#FFEDA8) — for CTAs and highlights */
+  /* Accent: Butter Yellow */
   --accent: oklch(0.945 0.10 99);
   --accent-foreground: oklch(0.21 0.06 175);
 
@@ -86,26 +85,26 @@
 
   /* Destructive: Red */
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive-foreground: oklch(0.945 0.10 99);
 
-  /* Border: slightly warmer/darker than background */
-  --border: oklch(0.90 0.008 90);
+  /* Border: butter yellow base — use with /10 /15 opacity in classes */
+  --border: oklch(0.945 0.10 99);
 
   /* Input */
-  --input: oklch(0.90 0.008 90);
+  --input: oklch(0.945 0.10 99);
 
-  /* Ring: Deep Forest Green */
-  --ring: oklch(0.21 0.06 175);
+  /* Ring: Butter Yellow */
+  --ring: oklch(0.945 0.10 99);
 
   /* Sidebar */
-  --sidebar: oklch(0.97 0.012 90);
-  --sidebar-foreground: oklch(0.10 0.005 250);
-  --sidebar-primary: oklch(0.21 0.06 175);
-  --sidebar-primary-foreground: oklch(0.97 0.012 90);
-  --sidebar-accent: oklch(0.95 0.003 90);
-  --sidebar-accent-foreground: oklch(0.10 0.005 250);
-  --sidebar-border: oklch(0.90 0.008 90);
-  --sidebar-ring: oklch(0.21 0.06 175);
+  --sidebar: oklch(0.21 0.06 175);
+  --sidebar-foreground: oklch(0.945 0.10 99);
+  --sidebar-primary: oklch(0.945 0.10 99);
+  --sidebar-primary-foreground: oklch(0.21 0.06 175);
+  --sidebar-accent: oklch(0.175 0.05 175);
+  --sidebar-accent-foreground: oklch(0.945 0.10 99);
+  --sidebar-border: oklch(0.945 0.10 99);
+  --sidebar-ring: oklch(0.945 0.10 99);
 }
 
 @layer base {
