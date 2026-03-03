@@ -13,14 +13,14 @@ export function Gallery() {
     ];
 
     return (
-        <section id="gallery" className="py-16 md:py-24 bg-[#002e29]">
+        <section id="gallery" className="py-16 md:py-24 bg-[#EBE6D6]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-                        <span className="text-[#FFEDA8]/60">Notre </span>
-                        <span className="text-[#FFEDA8]">Galerie</span>
+                        <span className="text-[#003631]/60">Notre </span>
+                        <span className="text-[#003631]">Galerie</span>
                     </h2>
-                    <p className="text-[#FFEDA8]/50 text-lg max-w-2xl mx-auto">
+                    <p className="text-[#003631]/50 text-lg max-w-2xl mx-auto">
                         Découvrez nos réalisations et la qualité de notre travail
                     </p>
                 </div>
@@ -39,7 +39,7 @@ export function Gallery() {
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-[#003631]/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <span className="text-[#FFEDA8] font-bold text-sm tracking-[0.2em] uppercase">Voir en grand</span>
+                                        <span className="text-[#F5F0E1] font-bold text-sm tracking-[0.2em] uppercase">Voir en grand</span>
                                     </div>
                                 </div>
                             </Link>
@@ -51,7 +51,7 @@ export function Gallery() {
                     <Link href="/gallery">
                         <button
                             type="button"
-                            className="h-12 px-8 text-sm font-bold tracking-[0.12em] uppercase text-[#FFEDA8] border border-[#FFEDA8]/30 hover:border-[#FFEDA8] hover:bg-[#FFEDA8] hover:text-[#003631] transition-all duration-200"
+                            className="h-12 px-8 text-sm font-bold tracking-[0.12em] uppercase text-[#003631] border border-[#003631]/30 hover:border-[#003631] hover:bg-[#003631] hover:text-[#F5F0E1] transition-all duration-200"
                         >
                             Voir toute la galerie
                         </button>

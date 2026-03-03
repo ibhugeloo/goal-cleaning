@@ -47,64 +47,64 @@
 }
 
 :root {
-  /* Dark Green & Butter Yellow — Premium Car Wash */
+  /* Light Écru & Deep Green — Premium Car Wash */
   --radius: 0.375rem;
 
-  /* Background: Deep Forest Green (#003631) */
-  --background: oklch(0.21 0.06 175);
-  /* Foreground: Butter Yellow (#FFEDA8) */
-  --foreground: oklch(0.945 0.10 99);
+  /* Background: Écru (#F5F0E1) */
+  --background: oklch(0.95 0.02 90);
+  /* Foreground: Deep Green (#003631) */
+  --foreground: oklch(0.21 0.06 175);
 
-  /* Card: Slightly darker green for depth */
-  --card: oklch(0.175 0.05 175);
-  --card-foreground: oklch(0.945 0.10 99);
+  /* Card: Warm white for depth against écru */
+  --card: oklch(0.98 0.01 90);
+  --card-foreground: oklch(0.21 0.06 175);
 
   /* Popover */
-  --popover: oklch(0.175 0.05 175);
-  --popover-foreground: oklch(0.945 0.10 99);
+  --popover: oklch(0.98 0.01 90);
+  --popover-foreground: oklch(0.21 0.06 175);
 
-  /* Primary: Butter Yellow — CTA / accent color */
-  --primary: oklch(0.945 0.10 99);
-  --primary-foreground: oklch(0.21 0.06 175);
+  /* Primary: Deep Green — CTA / accent color */
+  --primary: oklch(0.21 0.06 175);
+  --primary-foreground: oklch(0.95 0.02 90);
 
-  /* Secondary: Darker green surface */
-  --secondary: oklch(0.175 0.05 175);
-  --secondary-foreground: oklch(0.945 0.10 99);
+  /* Secondary: Alt écru surface */
+  --secondary: oklch(0.92 0.02 90);
+  --secondary-foreground: oklch(0.21 0.06 175);
 
   /* Muted */
-  --muted: oklch(0.175 0.05 175);
-  --muted-foreground: oklch(0.73 0.07 99);
+  --muted: oklch(0.92 0.02 90);
+  --muted-foreground: oklch(0.45 0.04 175);
 
-  /* Accent: Butter Yellow */
-  --accent: oklch(0.945 0.10 99);
-  --accent-foreground: oklch(0.21 0.06 175);
+  /* Accent: Deep Green */
+  --accent: oklch(0.21 0.06 175);
+  --accent-foreground: oklch(0.95 0.02 90);
 
-  /* Butter Yellow — standalone utility token */
-  --butter: oklch(0.945 0.10 99);
-  --butter-foreground: oklch(0.21 0.06 175);
+  /* Deep Green — standalone utility token */
+  --butter: oklch(0.21 0.06 175);
+  --butter-foreground: oklch(0.95 0.02 90);
 
   /* Destructive: Red */
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.945 0.10 99);
+  --destructive-foreground: oklch(0.95 0.02 90);
 
-  /* Border: butter yellow base — use with /10 /15 opacity in classes */
-  --border: oklch(0.945 0.10 99);
+  /* Border: deep green base — use with /10 /15 opacity in classes */
+  --border: oklch(0.21 0.06 175);
 
   /* Input */
-  --input: oklch(0.945 0.10 99);
+  --input: oklch(0.21 0.06 175);
 
-  /* Ring: Butter Yellow */
-  --ring: oklch(0.945 0.10 99);
+  /* Ring: Deep Green */
+  --ring: oklch(0.21 0.06 175);
 
   /* Sidebar */
-  --sidebar: oklch(0.21 0.06 175);
-  --sidebar-foreground: oklch(0.945 0.10 99);
-  --sidebar-primary: oklch(0.945 0.10 99);
-  --sidebar-primary-foreground: oklch(0.21 0.06 175);
-  --sidebar-accent: oklch(0.175 0.05 175);
-  --sidebar-accent-foreground: oklch(0.945 0.10 99);
-  --sidebar-border: oklch(0.945 0.10 99);
-  --sidebar-ring: oklch(0.945 0.10 99);
+  --sidebar: oklch(0.95 0.02 90);
+  --sidebar-foreground: oklch(0.21 0.06 175);
+  --sidebar-primary: oklch(0.21 0.06 175);
+  --sidebar-primary-foreground: oklch(0.95 0.02 90);
+  --sidebar-accent: oklch(0.92 0.02 90);
+  --sidebar-accent-foreground: oklch(0.21 0.06 175);
+  --sidebar-border: oklch(0.21 0.06 175);
+  --sidebar-ring: oklch(0.21 0.06 175);
 }
 
 @layer base {

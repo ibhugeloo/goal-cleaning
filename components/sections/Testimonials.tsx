@@ -24,14 +24,14 @@ export function Testimonials() {
     ];
 
     return (
-        <section className="py-16 md:py-24 bg-[#002e29]">
+        <section className="py-16 md:py-24 bg-[#EBE6D6]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-                        <span className="text-[#FFEDA8]/60">Ce qu&apos;ils disent de </span>
-                        <span className="text-[#FFEDA8]">nous</span>
+                        <span className="text-[#003631]/60">Ce qu&apos;ils disent de </span>
+                        <span className="text-[#003631]">nous</span>
                     </h2>
-                    <p className="text-[#FFEDA8]/50 text-lg max-w-2xl mx-auto">
+                    <p className="text-[#003631]/50 text-lg max-w-2xl mx-auto">
                         La satisfaction de nos clients est notre meilleure publicité
                     </p>
                 </div>
@@ -39,16 +39,16 @@ export function Testimonials() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {testimonials.map((testimonial, index) => (
                         <AnimateInView key={index} delay={index * 200}>
-                            <div className="bg-[#003631] border border-[#FFEDA8]/10 p-8 h-full flex flex-col">
+                            <div className="bg-[#FDFAF2] border border-[#003631]/10 p-8 h-full flex flex-col">
                                 <div className="flex gap-1 mb-5">
                                     {[...Array(testimonial.rating)].map((_, i) => (
-                                        <Star key={i} className="h-4 w-4 fill-[#FFEDA8] text-[#FFEDA8]" />
+                                        <Star key={i} className="h-4 w-4 fill-amber-500 text-amber-500" />
                                     ))}
                                 </div>
-                                <p className="text-[#FFEDA8]/65 italic mb-6 leading-relaxed flex-grow">&quot;{testimonial.content}&quot;</p>
-                                <div className="border-t border-[#FFEDA8]/10 pt-5">
-                                    <p className="font-bold text-[#FFEDA8] text-sm">{testimonial.name}</p>
-                                    <p className="text-xs text-[#FFEDA8]/40 mt-0.5">{testimonial.role}</p>
+                                <p className="text-[#003631]/65 italic mb-6 leading-relaxed flex-grow">&quot;{testimonial.content}&quot;</p>
+                                <div className="border-t border-[#003631]/10 pt-5">
+                                    <p className="font-bold text-[#003631] text-sm">{testimonial.name}</p>
+                                    <p className="text-xs text-[#003631]/40 mt-0.5">{testimonial.role}</p>
                                 </div>
                             </div>
                         </AnimateInView>

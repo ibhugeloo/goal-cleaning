@@ -14,7 +14,7 @@ export function BorderBeam({
     className,
     size = 200,
     duration = 3,
-    color = "#006341", // Forest Green
+    color = "#003631", // Deep Green
 }: BorderBeamProps) {
     return (
         <div className={cn("absolute inset-0 rounded-[inherit] pointer-events-none overflow-hidden", className)}>

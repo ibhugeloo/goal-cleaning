@@ -8,16 +8,16 @@ export function SocialProof() {
     ];
 
     return (
-        <section className="py-10 bg-[#002e29]">
+        <section className="py-10 bg-[#EBE6D6]">
             <div className="container mx-auto px-4">
-                <p className="text-center text-[#FFEDA8]/40 text-sm mb-6 uppercase tracking-widest">
+                <p className="text-center text-[#003631]/40 text-sm mb-6 uppercase tracking-widest">
                     Ils nous font confiance
                 </p>
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                     {clients.map((client) => (
                         <span
                             key={client}
-                            className="text-xl md:text-2xl font-bold text-[#FFEDA8]/30 hover:text-[#FFEDA8] transition-colors duration-300 cursor-default tracking-wide"
+                            className="text-xl md:text-2xl font-bold text-[#003631]/30 hover:text-[#003631] transition-colors duration-300 cursor-default tracking-wide"
                         >
                             {client}
                         </span>
