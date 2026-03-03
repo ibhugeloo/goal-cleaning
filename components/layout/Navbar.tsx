@@ -84,12 +84,12 @@ export function Navbar() {
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-[#F5F0E1] border-[#003631]/15">
-                <div className="flex flex-col gap-6 mt-8">
+                <div className="flex flex-col gap-4 mt-4">
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="text-lg font-medium text-[#003631]/70 hover:text-[#003631] transition-colors duration-150"
+                      className="text-base font-medium text-[#003631]/70 hover:text-[#003631] transition-colors duration-150"
                     >
                       {link.name}
                     </Link>
@@ -97,14 +97,14 @@ export function Navbar() {
                   <Link href="/contact" className="w-full">
                     <button
                       type="button"
-                      className="w-full h-12 text-sm font-semibold text-[#003631] border border-[#003631]/25 hover:border-[#003631] hover:bg-[#003631]/10 tracking-wide transition-colors duration-150"
+                      className="w-full h-10 text-sm font-semibold text-[#003631] border border-[#003631]/25 hover:border-[#003631] hover:bg-[#003631]/10 tracking-wide transition-colors duration-150"
                     >
                       Contactez-nous
                     </button>
                   </Link>
                   <CalButton
                     calLink={CAL_GENERIC}
-                    className="w-full h-12 bg-[#003631] text-[#F5F0E1] hover:bg-[#00493F] font-bold text-sm tracking-[0.1em] uppercase rounded-none transition-colors duration-150"
+                    className="w-full h-10 bg-[#003631] text-[#F5F0E1] hover:bg-[#00493F] font-bold text-sm tracking-[0.1em] uppercase rounded-none transition-colors duration-150"
                   >
                     Réserver en ligne
                   </CalButton>
