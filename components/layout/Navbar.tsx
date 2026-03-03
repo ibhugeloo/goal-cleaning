@@ -25,8 +25,8 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#003631] transition-all duration-300 ${
-        isScrolled ? "border-b border-[#FFEDA8]/15 shadow-lg shadow-black/20" : ""
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#F5F0E1] transition-all duration-300 ${
+        isScrolled ? "border-b border-[#003631]/15 shadow-lg shadow-black/5" : ""
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -35,7 +35,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-[#FFEDA8] font-display tracking-tighter"
+            className="text-2xl font-bold text-[#003631] font-display tracking-tighter"
           >
             GOAL CLEANING
           </Link>
@@ -46,7 +46,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#FFEDA8]/65 hover:text-[#FFEDA8] transition-colors duration-150 tracking-wide"
+                className="text-sm font-medium text-[#003631]/60 hover:text-[#003631] transition-colors duration-150 tracking-wide"
               >
                 {link.name}
               </Link>
@@ -58,14 +58,14 @@ export function Navbar() {
             <Link href="/contact">
               <button
                 type="button"
-                className="text-sm font-semibold text-[#FFEDA8]/65 hover:text-[#FFEDA8] px-4 py-2 transition-colors duration-150 tracking-wide"
+                className="text-sm font-semibold text-[#003631]/60 hover:text-[#003631] px-4 py-2 transition-colors duration-150 tracking-wide"
               >
                 Contactez-nous
               </button>
             </Link>
             <CalButton
               calLink={CAL_GENERIC}
-              className="bg-[#FFEDA8] text-[#003631] hover:bg-[#fff5c2] font-bold text-sm px-6 h-10 rounded-none tracking-[0.1em] uppercase transition-colors duration-150"
+              className="bg-[#003631] text-[#F5F0E1] hover:bg-[#00493F] font-bold text-sm px-6 h-10 rounded-none tracking-[0.1em] uppercase transition-colors duration-150"
             >
               Réserver
             </CalButton>
@@ -77,19 +77,19 @@ export function Navbar() {
               <SheetTrigger asChild>
                 <button
                   type="button"
-                  className="text-[#FFEDA8] p-2"
+                  className="text-[#003631] p-2"
                   aria-label="Menu"
                 >
                   <Menu className="h-6 w-6" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-[#003631] border-[#FFEDA8]/15">
+              <SheetContent side="right" className="bg-[#F5F0E1] border-[#003631]/15">
                 <div className="flex flex-col gap-6 mt-8">
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="text-lg font-medium text-[#FFEDA8]/70 hover:text-[#FFEDA8] transition-colors duration-150"
+                      className="text-lg font-medium text-[#003631]/70 hover:text-[#003631] transition-colors duration-150"
                     >
                       {link.name}
                     </Link>
@@ -97,14 +97,14 @@ export function Navbar() {
                   <Link href="/contact" className="w-full">
                     <button
                       type="button"
-                      className="w-full h-12 text-sm font-semibold text-[#FFEDA8] border border-[#FFEDA8]/25 hover:border-[#FFEDA8] hover:bg-[#FFEDA8]/10 tracking-wide transition-colors duration-150"
+                      className="w-full h-12 text-sm font-semibold text-[#003631] border border-[#003631]/25 hover:border-[#003631] hover:bg-[#003631]/10 tracking-wide transition-colors duration-150"
                     >
                       Contactez-nous
                     </button>
                   </Link>
                   <CalButton
                     calLink={CAL_GENERIC}
-                    className="w-full h-12 bg-[#FFEDA8] text-[#003631] hover:bg-[#fff5c2] font-bold text-sm tracking-[0.1em] uppercase rounded-none transition-colors duration-150"
+                    className="w-full h-12 bg-[#003631] text-[#F5F0E1] hover:bg-[#00493F] font-bold text-sm tracking-[0.1em] uppercase rounded-none transition-colors duration-150"
                   >
                     Réserver en ligne
                   </CalButton>

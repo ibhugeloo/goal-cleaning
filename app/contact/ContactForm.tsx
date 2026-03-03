@@ -16,14 +16,14 @@ export function ContactForm() {
     return (
         <>
             {state?.success && (
-                <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-green-500/10 border border-green-500/30 text-green-400">
+                <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-green-50 border border-green-500/30 text-green-700">
                     <CheckCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
                     <p>{state.message}</p>
                 </div>
             )}
 
             {state && !state.success && (
-                <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400">
+                <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-red-50 border border-red-500/30 text-red-700">
                     <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
                     <p>{state.message}</p>
                 </div>
@@ -105,7 +105,7 @@ export function ContactForm() {
                 <div className="space-y-2">
                     <label
                         htmlFor="sujet"
-                        className="text-sm font-medium text-gray-300 ml-1"
+                        className="text-sm font-medium text-foreground/70 ml-1"
                     >
                         Sujet
                     </label>
@@ -114,14 +114,14 @@ export function ContactForm() {
                         name="sujet"
                         placeholder="Lavage complet, Rénovation optiques..."
                         disabled={isPending || state?.success === true}
-                        className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary/50 focus:ring-primary/20 h-12 rounded-xl transition-all duration-300 hover:bg-white/10 disabled:opacity-50"
+                        className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:ring-primary/20 h-12 rounded-xl transition-all duration-300 hover:border-primary/30 disabled:opacity-50"
                     />
                 </div>
 
                 <div className="space-y-2">
                     <label
                         htmlFor="message"
-                        className="text-sm font-medium text-gray-300 ml-1"
+                        className="text-sm font-medium text-foreground/70 ml-1"
                     >
                         Message
                     </label>
@@ -137,7 +137,7 @@ export function ContactForm() {
                 <Button
                     type="submit"
                     disabled={isPending || state?.success === true}
-                    className="w-full bg-primary text-white hover:bg-[#004D30] font-bold h-12 rounded-xl text-lg transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-primary text-primary-foreground hover:bg-[#00493F] font-bold h-12 rounded-xl text-lg transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
                 >
                     {isPending ? (
                         <span className="flex items-center gap-2">
