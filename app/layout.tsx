@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import "./globals.css";
+import { RainBackground } from "@/components/ui/rain-background";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-display",
@@ -167,6 +168,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <RainBackground />
         {children}
       </body>
     </html>

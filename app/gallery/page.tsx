@@ -25,7 +25,7 @@ export default function GalleryPage() {
     ];
 
     return (
-        <main className="min-h-screen bg-background text-foreground">
+        <main className="min-h-screen text-foreground relative">
             <Navbar />
 
             {/* Header */}

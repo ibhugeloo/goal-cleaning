@@ -15,7 +15,7 @@ import { ContactForm } from "./ContactForm";
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-background text-foreground">
+        <main className="min-h-screen text-foreground relative">
             <Navbar />
 
             {/* Header Section */}
